@@ -50,6 +50,10 @@ public class Car {
         return gps;
     }
 
+    public void setGps(GPS gps) {
+        this.gps = gps;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -70,9 +74,5 @@ public class Car {
                 ", tripComputer=" + tripComputer +
                 ", gps=" + gps +
                 '}';
-    }
-
-    public void setGps(GPS gps) {
-        this.gps = gps;
     }
 }

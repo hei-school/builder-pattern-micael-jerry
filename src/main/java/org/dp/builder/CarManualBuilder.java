@@ -7,6 +7,7 @@ import org.dp.model.component.TripComputer;
 
 public class CarManualBuilder implements Builder {
     private Manual manual;
+
     @Override
     public void reset() {
         this.manual = new Manual();
