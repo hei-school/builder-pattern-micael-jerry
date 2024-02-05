@@ -4,6 +4,8 @@ import org.dp.model.component.Engine;
 import org.dp.model.component.GPS;
 import org.dp.model.component.TripComputer;
 
+import java.util.Objects;
+
 public class Car {
     private int seats;
     private Engine engine;
@@ -46,6 +48,28 @@ public class Car {
 
     public GPS getGps() {
         return gps;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Car car)) return false;
+        return getSeats() == car.getSeats() && Objects.equals(getEngine(), car.getEngine()) && Objects.equals(getTripComputer(), car.getTripComputer()) && Objects.equals(getGps(), car.getGps());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getSeats(), getEngine(), getTripComputer(), getGps());
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "seats=" + seats +
+                ", engine=" + engine +
+                ", tripComputer=" + tripComputer +
+                ", gps=" + gps +
+                '}';
     }
 
     public void setGps(GPS gps) {
