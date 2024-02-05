@@ -8,6 +8,10 @@ import org.dp.model.component.TripComputer;
 public class CarBuilder implements Builder {
     private Car car;
 
+    public CarBuilder() {
+        this.car = new Car();
+    }
+
     @Override
     public void reset() {
         this.car = new Car();
