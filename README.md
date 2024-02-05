@@ -19,4 +19,9 @@
 2. **Install dependencies**
 
     ```bash
-    mvn install
+    mvn clean install
+
+3. **Run test**
+
+   ```bash
+   mvn test
